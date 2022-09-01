@@ -1,6 +1,6 @@
 {
   "name": "@telesoho/excalidraw",
-  "version": "1.0.1",
+  "version": "version",
   "main": "main.js",
   "types": "types/packages/excalidraw/index.d.ts",
   "files": [
