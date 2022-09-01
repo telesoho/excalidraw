@@ -1,6 +1,6 @@
 #### Note
 
-⚠️ ⚠️ ⚠️ You are viewing the docs for the **next** release, in case you want to check the docs for the stable release, you can view it [here](https://www.npmjs.com/package/@excalidraw/excalidraw).
+⚠️ ⚠️ ⚠️ You are viewing the docs for the **next** release, in case you want to check the docs for the stable release, you can view it [here](https://www.npmjs.com/package/@telesoho/excalidraw).
 
 ### Excalidraw
 
@@ -11,26 +11,26 @@ Excalidraw exported as a component to directly embed in your projects.
 You can use npm
 
 ```
-npm install react react-dom @excalidraw/excalidraw
+npm install react react-dom @telesoho/excalidraw
 ```
 
 or via yarn
 
 ```
-yarn add react react-dom @excalidraw/excalidraw
+yarn add react react-dom @telesoho/excalidraw
 ```
 
 After installation you will see a folder `excalidraw-assets` and `excalidraw-assets-dev` in `dist` directory which contains the assets needed for this app in prod and dev mode respectively.
 
 Move the folder `excalidraw-assets` and `excalidraw-assets-dev` to the path where your assets are served.
 
-By default it will try to load the files from `https://unpkg.com/@excalidraw/excalidraw/dist/`
+By default it will try to load the files from `https://unpkg.com/@telesoho/excalidraw/dist/`
 
 If you want to load assets from a different path you can set a variable `window.EXCALIDRAW_ASSET_PATH` depending on environment (for example if you have different URL's for dev and prod) to the url from where you want to load the assets.
 
 #### Note
 
-**If you don't want to wait for the next stable release and try out the unreleased changes you can use `@excalidraw/excalidraw@next`.**
+**If you don't want to wait for the next stable release and try out the unreleased changes you can use `@telesoho/excalidraw@next`.**
 
 ### Demo
 
@@ -46,7 +46,7 @@ If you are using a Web bundler (for instance, Webpack), you can import it as an 
 
 ```js
 import React, { useEffect, useState, useRef } from "react";
-import { Excalidraw } from "@excalidraw/excalidraw";
+import { Excalidraw } from "@telesoho/excalidraw";
 import InitialData from "./initialData";
 
 import "./styles.scss";
@@ -164,13 +164,13 @@ import { useState, useEffect } from "react";
 export default function IndexPage() {
   const [Comp, setComp] = useState(null);
   useEffect(() => {
-    import("@excalidraw/excalidraw").then((comp) => setComp(comp.default));
+    import("@telesoho/excalidraw").then((comp) => setComp(comp.default));
   }, []);
   return <>{Comp && <Comp />}</>;
 }
 ```
 
-The `types` are available at `@excalidraw/excalidraw/types`, you can view [example for typescript](https://codesandbox.io/s/excalidraw-types-9h2dm)
+The `types` are available at `@telesoho/excalidraw/types`, you can view [example for typescript](https://codesandbox.io/s/excalidraw-types-9h2dm)
 
 #### In Browser
 
@@ -181,7 +181,7 @@ For development use :point_down:
 ```js
 <script
   type="text/javascript"
-  src="https://unpkg.com/@excalidraw/excalidraw/dist/excalidraw.development.js"
+  src="https://unpkg.com/@telesoho/excalidraw/dist/excalidraw.development.js"
 ></script>
 ```
 
@@ -190,7 +190,7 @@ For production use :point_down:
 ```js
 <script
   type="text/javascript"
-  src="https://unpkg.com/@excalidraw/excalidraw/dist/excalidraw.production.min.js"
+  src="https://unpkg.com/@telesoho/excalidraw/dist/excalidraw.production.min.js"
 ></script>
 ```
 
@@ -209,7 +209,7 @@ You will need to make sure `react`, `react-dom` is available as shown in the bel
 
     <script
       type="text/javascript"
-      src="https://unpkg.com/@excalidraw/excalidraw/dist/excalidraw.development.js"
+      src="https://unpkg.com/@telesoho/excalidraw/dist/excalidraw.development.js"
     ></script>
   </head>
 
@@ -591,7 +591,7 @@ This callback is triggered when mouse pointer is updated.
 Determines the language of the UI. It should be one of the [available language codes](https://github.com/excalidraw/excalidraw/blob/master/src/i18n.ts#L14). Defaults to `en` (English). We also export default language and supported languages which you can import as shown below.
 
 ```js
-import { defaultLang, languages } from "@excalidraw/excalidraw";
+import { defaultLang, languages } from "@telesoho/excalidraw";
 ```
 
 | name | type |
@@ -857,7 +857,7 @@ restoreAppState(appState: <a href="https://github.com/excalidraw/excalidraw/blob
 **_How to use_**
 
 ```js
-import { restoreAppState } from "@excalidraw/excalidraw";
+import { restoreAppState } from "@telesoho/excalidraw";
 ```
 
 This function will make sure all the keys have appropriate values in [appState](https://github.com/excalidraw/excalidraw/blob/master/src/types.ts#L79) and if any key is missing, it will be set to default value.
@@ -875,7 +875,7 @@ restoreElements(elements: <a href="https://github.com/excalidraw/excalidraw/blob
 **_How to use_**
 
 ```js
-import { restoreElements } from "@excalidraw/excalidraw";
+import { restoreElements } from "@telesoho/excalidraw";
 ```
 
 This function will make sure all properties of element is correctly set and if any attribute is missing, it will be set to default value.
@@ -895,7 +895,7 @@ See [`restoreAppState()`](https://github.com/excalidraw/excalidraw/blob/master/s
 **_How to use_**
 
 ```js
-import { restore } from "@excalidraw/excalidraw";
+import { restore } from "@telesoho/excalidraw";
 ```
 
 This function makes sure elements and state is set to appropriate values and set to default value if not present. It is a combination of [restoreElements](#restoreElements) and [restoreAppState](#restoreAppState).
@@ -911,7 +911,7 @@ restoreLibraryItems(libraryItems: <a href="https://github.com/excalidraw/excalid
 **_How to use_**
 
 ```js
-import { restoreLibraryItems } from "@excalidraw/excalidraw";
+import { restoreLibraryItems } from "@telesoho/excalidraw";
 
 restoreLibraryItems(libraryItems, "unpublished");
 ```
@@ -946,7 +946,7 @@ This function normalizes library items elements, adding missing values when need
 **How to use**
 
 ```js
-import { exportToCanvas } from "@excalidraw/excalidraw";
+import { exportToCanvas } from "@telesoho/excalidraw";
 ```
 
 This function returns the canvas with the exported elements, appState and dimensions.
@@ -974,7 +974,7 @@ exportToBlob(
 **How to use**
 
 ```js
-import { exportToBlob } from "@excalidraw/excalidraw";
+import { exportToBlob } from "@telesoho/excalidraw";
 ```
 
 Returns a promise which resolves with a [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob). It internally uses [canvas.ToBlob](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob).
@@ -1025,7 +1025,7 @@ exportToClipboard(
 **How to use**
 
 ```js
-import { exportToClipboard } from "@excalidraw/excalidraw";
+import { exportToClipboard } from "@telesoho/excalidraw";
 ```
 
 Copies the scene data in the specified format (determined by `type`) to clipboard.
@@ -1074,7 +1074,7 @@ If you want to overwrite the source field in the JSON string, you can set `windo
 **How to use**
 
 <pre>
-import { getSceneVersion } from "@excalidraw/excalidraw";
+import { getSceneVersion } from "@telesoho/excalidraw";
 getSceneVersion(elements:  <a href="https://github.com/excalidraw/excalidraw/blob/master/src/element/types.ts#L106">ExcalidrawElement[]</a>)
 </pre>
 
@@ -1091,7 +1091,7 @@ isInvisiblySmallElement(element:  <a href="https://github.com/excalidraw/excalid
 **How to use**
 
 ```js
-import { isInvisiblySmallElement } from "@excalidraw/excalidraw";
+import { isInvisiblySmallElement } from "@telesoho/excalidraw";
 ```
 
 Returns `true` if element is invisibly small (e.g. width & height are zero).
@@ -1099,7 +1099,7 @@ Returns `true` if element is invisibly small (e.g. width & height are zero).
 #### `loadLibraryFromBlob`
 
 ```js
-import { loadLibraryFromBlob } from "@excalidraw/excalidraw";
+import { loadLibraryFromBlob } from "@telesoho/excalidraw";
 ```
 
 **_Signature_**
@@ -1115,7 +1115,7 @@ This function loads the library from the blob. Additonally takes `defaultStatus`
 **How to use**
 
 ```js
-import { loadFromBlob } from "@excalidraw/excalidraw";
+import { loadFromBlob } from "@telesoho/excalidraw";
 
 const scene = await loadFromBlob(file, null, null);
 excalidrawAPI.updateScene(scene);
@@ -1139,7 +1139,7 @@ This function loads the scene data from the blob (or file). If you pass `localAp
 **How to use**
 
 ```js
-import { loadSceneOrLibraryFromBlob, MIME_TYPES } from "@excalidraw/excalidraw";
+import { loadSceneOrLibraryFromBlob, MIME_TYPES } from "@telesoho/excalidraw";
 
 const contents = await loadSceneOrLibraryFromBlob(file, null, null);
 if (contents.type === MIME_TYPES.excalidraw) {
@@ -1167,7 +1167,7 @@ This function loads either scene or library data from the supplied blob. If the 
 **How to use**
 
 ```js
-import { getFreeDrawSvgPath } from "@excalidraw/excalidraw";
+import { getFreeDrawSvgPath } from "@telesoho/excalidraw";
 ```
 
 **Signature**
@@ -1183,7 +1183,7 @@ This function returns the free draw svg path for the element.
 **How to use**
 
 ```js
-import { isLinearElement } from "@excalidraw/excalidraw";
+import { isLinearElement } from "@telesoho/excalidraw";
 ```
 
 **Signature**
@@ -1199,7 +1199,7 @@ This function returns true if the element is linear type (`arrow` |`line`) else 
 **How to use**
 
 ```js
-import { getNonDeletedElements } from "@excalidraw/excalidraw";
+import { getNonDeletedElements } from "@telesoho/excalidraw";
 ```
 
 **Signature**
@@ -1213,7 +1213,7 @@ This function returns an array of deleted elements.
 #### `mergeLibraryItems`
 
 ```js
-import { mergeLibraryItems } from "@excalidraw/excalidraw";
+import { mergeLibraryItems } from "@telesoho/excalidraw";
 ```
 
 **_Signature_**
@@ -1229,7 +1229,7 @@ This function merges two `LibraryItems` arrays, where unique items from `otherIt
 **How to use**
 
 ```js
-import { parseLibraryTokensFromUrl } from "@excalidraw/excalidraw";
+import { parseLibraryTokensFromUrl } from "@telesoho/excalidraw";
 ```
 
 **Signature**
@@ -1248,7 +1248,7 @@ Parses library parameters from URL if present (expects the `#addLibrary` hash ke
 **How to use**
 
 ```js
-import { useHandleLibrary } from "@excalidraw/excalidraw";
+import { useHandleLibrary } from "@telesoho/excalidraw";
 
 export const App = () => {
   // ...
@@ -1272,7 +1272,7 @@ In the future, we will be adding support for handling library persistence to bro
 #### `sceneCoordsToViewportCoords`
 
 ```js
-import { sceneCoordsToViewportCoords } from "@excalidraw/excalidraw";
+import { sceneCoordsToViewportCoords } from "@telesoho/excalidraw";
 ```
 
 **_Signature_**
@@ -1286,7 +1286,7 @@ This function returns equivalent viewport coords for the provided scene coords i
 #### `viewportCoordsToSceneCoords`
 
 ```js
-import { viewportCoordsToSceneCoords } from "@excalidraw/excalidraw";
+import { viewportCoordsToSceneCoords } from "@telesoho/excalidraw";
 ```
 
 **_Signature_**
@@ -1304,7 +1304,7 @@ This function returns equivalent scene coords for the provided viewport coords i
 **How to use**
 
 ```js
-import { FONT_FAMILY } from "@excalidraw/excalidraw";
+import { FONT_FAMILY } from "@telesoho/excalidraw";
 ```
 
 `FONT_FAMILY` contains all the font families used in `Excalidraw` as explained below
@@ -1322,7 +1322,7 @@ Defaults to `FONT_FAMILY.Virgil` unless passed in `initialData.appState.currentI
 **How to use**
 
 ```js
-import { THEME } from "@excalidraw/excalidraw";
+import { THEME } from "@telesoho/excalidraw";
 ```
 
 `THEME` contains all the themes supported by `Excalidraw` as explained below
@@ -1339,7 +1339,7 @@ Defaults to `THEME.LIGHT` unless passed in `initialData.appState.theme`
 **How to use **
 
 ```js
-import { MIME_TYPES } from "@excalidraw/excalidraw";
+import { MIME_TYPES } from "@telesoho/excalidraw";
 ```
 
 [`MIME_TYPES`](https://github.com/excalidraw/excalidraw/blob/master/src/constants.ts#L92) contains all the mime types supported by `Excalidraw`.

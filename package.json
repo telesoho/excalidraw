@@ -22,7 +22,7 @@
     "@sentry/browser": "6.2.5",
     "@sentry/integrations": "6.2.5",
     "@testing-library/jest-dom": "5.16.2",
-    "@testing-library/react": "12.1.5",
+    "@testing-library/react": "^13.0.0",
     "@tldraw/vec": "1.7.1",
     "@types/jest": "27.4.0",
     "@types/pica": "5.1.3",
@@ -86,9 +86,8 @@
     ],
     "resetMocks": false
   },
-  "name": "excalidraw",
+  "name": "telesoho-excalidraw",
   "prettier": "@excalidraw/prettier-config",
-  "private": true,
   "scripts": {
     "build-node": "node ./scripts/build-node.js",
     "build:app:docker": "REACT_APP_DISABLE_SENTRY=true react-scripts build",
@@ -116,5 +115,16 @@
     "autorelease": "node scripts/autorelease.js",
     "prerelease": "node scripts/prerelease.js",
     "release": "node scripts/release.js"
+  },
+  "description": "<div align=\"center\" style=\"display:flex;flex-direction:column;\">   <a href=\"https://excalidraw.com\">     <img width=\"540\" src=\"./public/og-image-sm.png\" alt=\"Excalidraw logo: Sketch handrawn like diagrams.\" />   </a>   <h3>Virtual whiteboard for sketching hand-drawn like diagrams.<br>Collaborative and end-to-end encrypted.</h3>   <p>     <a href=\"https://twitter.com/Excalidraw\">       <img alt=\"Follow Excalidraw on Twitter\" src=\"https://img.shields.io/twitter/follow/excalidraw.svg?label=follow+excalidraw&style=social&logo=twitter\">     </a>     <a target=\"_blank\" href=\"https://crowdin.com/project/excalidraw\">       <img src=\"https://badges.crowdin.net/excalidraw/localized.svg\">     </a>   </p>   <p>Ask questions or hang out on our <a target=\"_blank\" href=\"https://discord.gg/UexuTaE\">discord.gg/UexuTaE</a>.</p> </div>",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telesoho/excalidraw.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telesoho/excalidraw/issues"
   }
 }
