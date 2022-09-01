@@ -11,7 +11,7 @@ The change should be grouped under one of the below section and must contain PR 
 Please add the latest change on the top under the correct section.
 -->
 
-## Unreleased
+## 1.0.2 (2022-09-01)
 
 ### Excalidraw API
 
@@ -1399,4 +1399,8 @@ React.createElement(ExcalidrawLib.Excalidraw, opts);
 
 ## 0.1.0
 
-First release of `@excalidraw/excalidraw`
+First release of `@excalidraw/excalidraw`## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+---

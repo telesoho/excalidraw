@@ -82,7 +82,7 @@ Find a growing list of libraries containing assets for your drawings at [librari
 
 ## Embedding Excalidraw in your App?
 
-Try out [`@excalidraw/excalidraw`](https://www.npmjs.com/package/@excalidraw/excalidraw). This package allows you to easily embed Excalidraw as a React component into your apps.
+Try out [`@telesoho/excalidraw`](https://www.npmjs.com/package/@telesoho/excalidraw). This package allows you to easily embed Excalidraw as a React component into your apps.
 
 ## Development
 
