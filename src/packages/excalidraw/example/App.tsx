@@ -799,8 +799,8 @@ export default function App({ appTitle, useCustom, customArgs }: AppProps) {
                 files: excalidrawAPI.getFiles(),
               });
               const ctx = canvas.getContext("2d");
-              ctx.font = "30px Virgil Yozai";
-              ctx.strokeText("My custom text", 50, 60);
+              ctx!.font = "30px Virgil Yozai";
+              ctx!.strokeText("My custom text", 50, 60);
               setCanvasUrl(canvas.toDataURL());
             }}
           >
