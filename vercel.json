@@ -21,6 +21,32 @@
           "value": "origin"
         }
       ]
+    },
+    {
+      "source": "/:file*.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/(Virgil|Cascadia|Assistant-Regular|Youzai-Regular).woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -36,7 +62,9 @@
           "value": "vscode.excalidraw.com"
         }
       ],
-      "destination": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor"
+      "destination": "https://marketplace.visualstudio.com/items?itemName=telesoho.excalidraw-editor-cj"
     }
-  ]
+  ],
+  "outputDirectory": "excalidraw-app/build",
+  "installCommand": "yarn install"
 }
