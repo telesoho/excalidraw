@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://excalidraw.com"
+          "value": "*"
         },
         {
           "key": "X-Content-Type-Options",
@@ -31,12 +31,12 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://excalidraw.com"
+          "value": "*"
         }
       ]
     },
     {
-      "source": "/(Virgil|Cascadia|Assistant-Regular).woff2",
+      "source": "/(Virgil|Cascadia|Assistant-Regular|Youzai-Regular).woff2",
       "headers": [
         {
           "key": "Cache-Control",
@@ -62,7 +62,7 @@
           "value": "vscode.excalidraw.com"
         }
       ],
-      "destination": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor"
+      "destination": "https://marketplace.visualstudio.com/items?itemName=telesoho.excalidraw-editor-cj"
     }
   ],
   "outputDirectory": "excalidraw-app/build",
